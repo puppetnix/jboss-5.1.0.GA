@@ -25,7 +25,7 @@ JBOSS_USER=${JBOSS_USER:-"jboss"}
 JAVAPTH=${JAVAPTH:-"/usr/lib/jvm/java-7-oracle/jre/bin/"}
 
 #configuration to use, usually one of 'minimal', 'default', 'all'
-JBOSS_CONF=${JBOSS_CONF:-"connecture"}
+JBOSS_CONF=${JBOSS_CONF:-"default"}
 
 #if JBOSS_HOST specified, use -b to bind jboss services to that address
 JBOSS_BIND_ADDR=${JBOSS_HOST:+"-b $JBOSS_HOST"}
