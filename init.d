@@ -70,6 +70,17 @@ if [ ! -d "$JBOSS_HOME" ]; then
   exit 1
 fi
 
+status () {
+  pslist=$( ps -ef | grep java | grep $JBOSS_USER | awk '{print $2}' | tr '\n' ' ' | sed -e s/\ $// )
+  if [ -n "$pslist" ]; then
+    echo "jboss (pid $pslist) is running result: 0"
+    return 0
+  fi
+  echo "jboss is stopped result: 3"
+  return 3
+}
+
+
 echo JBOSS_CMD_START = $JBOSS_CMD_START
 
 case "$1" in
@@ -92,7 +103,10 @@ restart)
     $0 stop
     $0 start
     ;;
+status)
+    status
+    ;;
 *)
-    echo "usage: $0 (start|stop|restart|help)"
+    echo "usage: $0 (start|stop|restart|help|status)"
 esac
 
