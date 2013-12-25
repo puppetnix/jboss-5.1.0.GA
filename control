@@ -1,0 +1,19 @@
+Source: jboss
+Section: java
+Priority: optional
+Maintainer: Artem Kobrin <kobrin.artem@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://sourceforge.net/projects/jboss/files/JBoss/JBoss-5.1.0.GA/
+#Vcs-Git: git://git.debian.org/collab-maint/jboss.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/jboss.git;a=summary
+
+Package: jboss
+Architecture: all
+Depends: ${misc:Depends}, java (>= 7u45.jdk-custom1)
+Description: JBOSS Application Server
+ JBoss AS, or simply JBoss, is an application server 
+ authored by JBoss, now developed by Red Hat. 
+ JBoss is written in Java and is executable on top 
+ of the Java Platform, Enterprise Edition (Java EE), 
+ which is available cross-platform.

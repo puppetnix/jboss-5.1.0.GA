@@ -1,0 +1,10 @@
+bin /opt/jboss-5.1.0.GA/
+lib /opt/jboss-5.1.0.GA/
+client /opt/jboss-5.1.0.GA/
+server /opt/jboss-5.1.0.GA/
+common /opt/jboss-5.1.0.GA/
+jar-versions.xml /opt/jboss-5.1.0.GA/
+readme.html /opt/jboss-5.1.0.GA/
+lgpl.html /opt/jboss-5.1.0.GA/
+JBossORG-EULA.txt /opt/jboss-5.1.0.GA/
+copyright.txt /opt/jboss-5.1.0.GA/

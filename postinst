@@ -1,0 +1,20 @@
+#!/bin/bash
+if [ "$1" = "configure" ]; then
+ if ! getent passwd jboss > /dev/null; then
+   adduser --quiet --system --group --home /opt/jboss-5.1.0.GA/  \
+        --no-create-home   --shell /bin/bash                              \
+        --gecos "Jboss daemon" \
+        jboss
+ fi
+
+ if getent passwd jboss > /dev/null; then
+   userdel jboss
+   adduser --quiet --system --group --home /opt/jboss-5.1.0.GA/  \
+        --no-create-home      --shell /bin/bash                           \
+        --gecos "Jboss daemon" \
+        jboss
+ fi
+
+ chown jboss /opt/jboss-5.1.0.GA/ -R
+
+fi

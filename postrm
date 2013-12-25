@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case "$1" in
+    purge|remove)
+                # Remove user
+                if  getent passwd jboss > /dev/null; then
+                        userdel jboss
+                fi
+
+                ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+
+esac
+
+exit 0
